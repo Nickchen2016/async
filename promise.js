@@ -29,11 +29,8 @@ function createData(data){
     })
 }
 
-async function init() {
-    //waiting for the promise done
-    await createData({ title:'title4',body:'This is body 4' });
-    console.log(arr)
-    getData();
-}
+// getData();
 
-init();
+createData({ title:'title3',body:'This is body 3' })
+    .then(getData)
+    .catch(err => console.log(err))
