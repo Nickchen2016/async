@@ -31,7 +31,7 @@ function createData(data){
 
 async function init() {
     //waiting for the promise done
-    await createData({ title:'title4',body:'This is body 4' });
+    await createData({ title:'title3',body:'This is body 3' });
     console.log(arr)
     getData();
 }
