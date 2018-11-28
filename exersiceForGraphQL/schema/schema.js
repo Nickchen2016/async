@@ -8,21 +8,23 @@ const { GraphQLObjectType, GraphQLString, GraphQLSchema } = graphql;
 var books = [
     {name:'book 1', genre:'Fantacy', id:'1'},
     {name:'book 2', genre:'Fantacy', id:'2'},
-    {name:'book 3', genre:'Sci-Fi', id:'3'}
+    {name:'book 3', genre:'Sci-Fi', id:'3'},
+    {name:'book 4', genre:'documentary', id:'4'},
+    {name:'book 5', genre:'documentary', id:'5'}
 ]
 
 const BookType = new GraphQLObjectType({
     name: 'Book',
-    fileds:()=>({
+    fields:()=>({
        id: { type: GraphQLString },
        name: { type:GraphQLString },
        genre: { type:GraphQLString } 
     })
 });
 
-const RootQuery = new GraphQLObjectType({
+const RootQuery = new GraphQLObjectType({ //existed as a way to connect the front-end query to back-end DB by using bookType
     name: 'RootQueryType',
-    fileds:{
+    fields:{
         book:{
             type: BookType,
             args:{ id:{ type:GraphQLString } },
