@@ -8,6 +8,6 @@ app.use('/graphql',graphqlHTTP({
     graphiql:true
 }) )
 
-app.listen(3000, ()=>{
+app.listen(3300, ()=>{
     console.log('It`s connecting now!')
 })
